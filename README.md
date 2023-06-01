@@ -4,19 +4,19 @@ This Python application performs data transformation and cleansing operations on
 
 **Folder Structure**
 
-README : Please read through this file to be able to run the date transformation application
-dockerfile : This text file is used to build the docker image
-measurments.csv: Input dataset provided to work on.
-output.csv: The transformed data with the added boolean column
-python_application.py: The python code of carrying on the required cleansing and transformation
-requirements.txt: Dependincies and packages used in python app and used by docker to build the docker image
-Documentation.pdf: Application documentation and output screenshots
+1. README : Please read through this file to be able to run the date transformation application
+2. dockerfile : This text file is used to build the docker image
+3. measurments.csv: Input dataset provided to work on.
+4. output.csv: The transformed data with the added boolean column
+5. python_application.py: The python code of carrying on the required cleansing and transformation
+6. requirements.txt: Dependincies and packages used in python app and used by docker to build the docker image
+7. Documentation.pdf: Application documentation and output screenshots
 
 **Prerequisites**
 
-Python 3.9 or higher installed on your local machine.
-Required Python packages: pandas, pandasql.
-Docker installation on the local machine
+1. Python 3.9 or higher installed on your local machine.
+2. Required Python packages: pandas, pandasql.
+3. Docker installation on the local machine
 
 **Getting Started**
 
@@ -37,12 +37,12 @@ Run the application:
 
 To run the application within a Docker container, follow these steps:
 
-In the terminal or command prompt, navigate to the project directory containing the Dockerfile.
-Build the Docker image using the following command
+1. In the terminal or command prompt, navigate to the project directory containing the Dockerfile.
+2. Build the Docker image using the following command
  > docker build -t data-transformation-app .
 
-After the Docker image is successfully built, run the following command to start a container from the Docker image:
+3. After the Docker image is successfully built, run the following command to start a container from the Docker image:
  > docker run --name data-trans-cont data-transformation-app
 
-After the container finishes running, access the output file output.csv by copying it from the container to your local machine:
+4. After the container finishes running, access the output file output.csv by copying it from the container to your local machine:
  > docker cp data-trans-cont:/app/output.csv ./output.csv
